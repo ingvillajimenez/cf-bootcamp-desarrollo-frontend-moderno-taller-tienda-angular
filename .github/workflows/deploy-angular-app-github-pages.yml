@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href "/angular-cf-taller/"
+        run: npm run build -- --configuration production --base-href "/taller-tienda-angular/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
