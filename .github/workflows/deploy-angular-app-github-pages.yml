@@ -38,18 +38,18 @@ jobs:
 
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href "/angular-cf-taller/"
-        
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
           enablement: true
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-					# Upload dist directory
+          # Upload dist directory
           path: './dist/taller-tienda-angular/browser'
-	
+
   deploy:
     environment:
       name: github-pages
@@ -57,7 +57,7 @@ jobs:
 
     runs-on: ubuntu-latest
     needs: build
-    
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
