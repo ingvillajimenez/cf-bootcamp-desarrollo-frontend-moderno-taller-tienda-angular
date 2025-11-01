@@ -1,0 +1,7 @@
+<div class="product-card">
+  <a [routerLink]="['/product', product().id]">
+    <img [src]="product().image" [alt]="product().title" />
+    <h3>{{ product().title | slice : 0 : 50 }} {{ product().title.length > 50 ? '...' : '' }}</h3>
+  </a>
+  <p class="price">{{ product().price | currency : 'USD' }}</p>
+</div>
